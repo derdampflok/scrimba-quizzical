@@ -1,3 +1,5 @@
+import './CoverPage.css'
+
 export default function CoverPage(props) {
     return (
         <>

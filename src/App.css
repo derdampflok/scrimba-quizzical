@@ -1,0 +1,13 @@
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-image: url('./assets/blob-blue.png'), url('./assets/blob-yellow.png');
+    background-repeat: no-repeat;
+    background-position: bottom left, top right;
+    background-size: 15%, 15%;
+}
+
+main.big-background {
+    background-size: 20%, 20%;
+}

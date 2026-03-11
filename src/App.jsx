@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import CoverPage from './components/CoverPage'
 import Quiz from './components/Quiz/Quiz'
+import clsx from 'clsx'
 
 
 export default function App() {
@@ -11,9 +12,18 @@ export default function App() {
     setShowCoverPage(false)
   }
 
+  const mainClassName = clsx({
+    "big-background": showCoverPage
+  })
+
   return (
-    <main>
-      {showCoverPage ? <CoverPage startQuiz={startQuiz} /> : <Quiz />}
-    </main>
+    <>
+      <main className={mainClassName}>
+        {showCoverPage ?
+          <CoverPage startQuiz={startQuiz} />
+          :
+          <Quiz />}
+      </main>
+    </>
   )
 }
