@@ -2,9 +2,10 @@ import './CoverPage.css'
 
 export default function CoverPage(props) {
     return (
-        <>
-            <h1>Cover Page</h1>
+        <main>
+            <h1>Quizzical</h1>
+            <p>Description if needed</p>
             <button onClick={props.startQuiz}>Start Quiz</button>
-        </>
+        </main>
     )
 }

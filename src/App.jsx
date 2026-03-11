@@ -12,18 +12,18 @@ export default function App() {
     setShowCoverPage(false)
   }
 
-  const mainClassName = clsx({
+  const pageClassName = clsx({
     "big-background": showCoverPage
   })
 
   return (
     <>
-      <main className={mainClassName}>
+      <page className={pageClassName}>
         {showCoverPage ?
           <CoverPage startQuiz={startQuiz} />
           :
           <Quiz />}
-      </main>
+      </page>
     </>
   )
 }
