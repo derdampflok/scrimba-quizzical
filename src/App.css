@@ -1,4 +1,4 @@
-page {
+.page {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -8,6 +8,6 @@ page {
     background-size: 15%, 15%;
 }
 
-page.big-background {
+.page.big-background {
     background-size: 20%, 20%;
 }
