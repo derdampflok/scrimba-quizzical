@@ -1,4 +1,5 @@
 .page {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -6,6 +7,10 @@
     background-repeat: no-repeat;
     background-position: bottom left, top right;
     background-size: 15%, 15%;
+}
+
+.page>main {
+    flex: 0.9;
 }
 
 .page.big-background {

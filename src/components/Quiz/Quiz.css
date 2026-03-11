@@ -1,0 +1,15 @@
+.quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.quiz>button {
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    margin-top: 40px;
+    font-size: 1rem;
+}

@@ -1,6 +1,4 @@
 body {
-    height: 100vh;
-    overflow: hidden;
     margin: 0;
     font-family: "Karla", sans-serif;
     color: #293264;
@@ -13,4 +11,11 @@ button {
 
 #root {
     height: 100%;
+}
+
+.primary-button {
+    background-color: #4D5B9E;
+    border-radius: 15px;
+    border-style: none;
+    color: #F5F7FB;
 }

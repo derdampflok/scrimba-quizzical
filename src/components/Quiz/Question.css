@@ -1,0 +1,28 @@
+.question {
+    border-bottom: 0.8px solid #DBDEF0;
+    padding-bottom: 15px;
+    width: 100%;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.question>p {
+    margin: 15px 0;
+    color: #293264;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.answers {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+}
+
+.answers>button {
+    border: 0.75px solid #4D5B9E;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #293264;
+    font-size: 0.9rem;
+}

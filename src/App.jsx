@@ -6,7 +6,7 @@ import clsx from 'clsx'
 
 
 export default function App() {
-  const [showCoverPage, setShowCoverPage] = useState(true)
+  const [showCoverPage, setShowCoverPage] = useState(false) // TODO set true
 
   function startQuiz() {
     setShowCoverPage(false)

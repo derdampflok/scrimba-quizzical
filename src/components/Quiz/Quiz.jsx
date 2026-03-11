@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import './Quiz.css'
 import shuffleArray from 'shuffle-array'
+import Question from './Question'
+import he from 'he'
 
 export default function Quiz() {
     const [questions, setQuestions] = useState([])
@@ -14,16 +16,27 @@ export default function Quiz() {
     }, [])
 
     function mapQuestion(apiQuestion) {
-        const answers = apiQuestion.incorrect_answers.map(answer => ({ answer, correct: false }))
-        answers.push({ answer: apiQuestion.correct_answer, correct: true })
+        const answers = apiQuestion.incorrect_answers.map(answer => ({ answer: he.decode(answer), correct: false, selected: false }))
+        answers.push({ answer: he.decode(apiQuestion.correct_answer), correct: true, selected: false })
 
         shuffleArray(answers)
 
         return {
-            question: apiQuestion.question,
+            question: he.decode(apiQuestion.question),
             answers
         }
     }
 
-    return <h1>Quiz</h1>
+    const questionElements = questions.map(question => <Question
+        key={question.question}
+        question={question.question}
+        answers={question.answers}
+    />)
+
+    return (
+        <main className='quiz'>
+            {questionElements}
+            <button className="primary-button">Check answers</button>
+        </main>
+    )
 }
