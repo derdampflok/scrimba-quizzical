@@ -6,10 +6,24 @@
     margin-bottom: 20px;
 }
 
-.quiz>button {
+
+
+.correct-answers {
+    color: #293264;
+    font-weight: 700;
+}
+
+.bottom-part {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.bottom-part>button {
     border-radius: 10px;
     width: 150px;
     height: 40px;
-    margin-top: 40px;
     font-size: 1rem;
 }

@@ -31,3 +31,17 @@
     background-color: #D6DBF5;
     border: none;
 }
+
+.answers>button.faded {
+    opacity: 50%;
+}
+
+.answers>button.incorrect {
+    background-color: #F8BCBC;
+    border: none;
+}
+
+.answers>button.correct {
+    background-color: #94D7A2;
+    border: none;
+}
