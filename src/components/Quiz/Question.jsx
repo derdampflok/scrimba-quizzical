@@ -12,11 +12,11 @@ export default function Question(props) {
         })
         return <button
             className={buttonClass}
-            key={answer.answer}>
+            key={answer.answer}
+            onClick={() => props.selectAnswer(props.question, answer.answer)}>
             {answer.answer}
         </button>
     })
-    console.log(answerButtons)
 
     return (
         <div className="question">

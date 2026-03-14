@@ -27,10 +27,28 @@ export default function Quiz() {
         }
     }
 
+    function selectAnswer(question, answer) {
+        setQuestions(prevQuestions =>
+            prevQuestions.map(q =>
+                q.question === question
+                    ? {
+                        ...q,
+                        answers: q.answers.map(ans =>
+                            ans.answer === answer
+                                ? { ...ans, selected: true }
+                                : { ...ans, selected: false }  // Deselect others in the same question
+                        )
+                    }
+                    : q
+            )
+        )
+    }
+
     const questionElements = questions.map(question => <Question
         key={question.question}
         question={question.question}
         answers={question.answers}
+        selectAnswer={selectAnswer}
     />)
 
     return (
